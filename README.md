@@ -1,4 +1,4 @@
-coursera-android-pos
-====================
+POSA-14
+=======
 
-Coursera Specialization - Pattern Oriented Software Android
+This repository contains assignments and examples for the 2014 offering of the POSA MOOC (see www.coursera.org/course/posa for more information)
