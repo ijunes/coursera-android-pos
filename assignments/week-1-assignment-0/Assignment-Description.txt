@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 Week 1: Programming Assignment 0 Description
+=======
+Week 1: Programming Assignment 0
+>>>>>>> 9fd1c4e49778d97613b3d9cc324c279dfb2e7274
 
 Released Monday, May 12, 2014
 Due Monday, May 26th, 2014
@@ -22,9 +26,13 @@ In particular, you'll need to do the following:
 
 . Implement the "TODO" portions of the testQueue() method so that two
   Java Threads are created and started to run the producerRunnable and
+<<<<<<< HEAD
   consumerRunnable objects.  Please keep the "TODO" comments in the
   code so that peer reviewers can find them quickly during the
   assessment phase.
+=======
+  consumerRunnable objects.
+>>>>>>> 9fd1c4e49778d97613b3d9cc324c279dfb2e7274
 
 . After giving the Threads a chance to run for a short while (which is
   done for you via the Thread.sleep() method) you'll interrupt both of
@@ -67,6 +75,7 @@ compile errors should disappear!
 
 To run the JUnit tests in Eclipse, right-click on
 SynchronizedQueueTest.java and go to "Run As > JUnit Test". The JUnit
+<<<<<<< HEAD
 view will pop up in Eclipse and run the test contained therein.  If
 your testQueue method runs successfully the ArrayBlockingQueue should
 pass, i.e., a green-check mark will appear next to the test in the
@@ -79,3 +88,13 @@ the console.  This debugging output is for informational purposes only
 and have no bearing on whether your program is "correct."  If the
 tests run and "pass," you should see a green check-mark next to the
 test in the JUnit view, which is all that matters.
+=======
+view will pop up in Eclipse and run the tests contained therein.  All
+tests should pass. The ArrayBlockingQueue will pass because your
+testQueue method runs successfully.  The tests for BuggyBlockingQueue
+(which is an intentionally flawed class), should "pass" if some error
+occurs while running testQueue (these errors are expected).  As long
+as these JUnit tests both "pass" successfully your program will be
+be consider "correct" for the purposes of this assignment.
+
+>>>>>>> 9fd1c4e49778d97613b3d9cc324c279dfb2e7274
