@@ -45,7 +45,11 @@ public class SynchronizedQueueTest {
     	 * than it should be.
          */
         SynchronizedQueueResult result =
+<<<<<<< HEAD
             new SynchronizedQueue().testQueue(queue, qName);
+=======
+            new SynchronizedQueueImpl().testQueue(queue, qName);
+>>>>>>> 59108036de3dae32c40036d8ba999c8a7a2fb63a
 
         if (SynchronizedQueue.diagnosticsEnabled) {
             System.out.println("End " + qName + " test.\n");

@@ -36,7 +36,12 @@ In particular, you'll need to do the following:
 
 . Implement the SimpleAtomicLong class, which you should replace with
   your solution to week-2-assignment-1, after applying any fixes
+<<<<<<< HEAD
   suggested by peer graders.  This class is only used by the
+=======
+  motivated by watching the Virtual Office Hours video of the
+  instructor's solution(s).  This class is only used by the
+>>>>>>> 59108036de3dae32c40036d8ba999c8a7a2fb63a
   PalantirManagerUnitTest.java and should not be used in the
   SimpleSemaphore implementation itself.
 

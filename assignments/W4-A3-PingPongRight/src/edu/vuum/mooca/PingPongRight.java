@@ -53,8 +53,12 @@ public class PingPongRight {
                                   SimpleSemaphore semaphoreTwo,
                                   int maxIterations) {
             // TODO - You fill in here.
+        	mMaxLoopIterations = maxIterations;
+        	SimpleSemaphore [] sem = new SimpleSemaphore [] {
+        		  semaphoreOne, semaphoreTwo
+        		};
         }
-
+        SimpleSemaphore [] sem;
         /**
          * Main event loop that runs in a separate thread of control
          * and performs the ping/pong algorithm using the
@@ -67,6 +71,14 @@ public class PingPongRight {
              */
 
             // TODO - You fill in here.
+        	  for (int i = 1 ; i <= mMaxIterations ; i++) {
+                  try {
+                	  PlayPingPongThread ping = new PlayPingPongThread("Ping!", sem[0], pongSemaphore);
+                  } catch (InterruptedException e) {
+                      e.printStackTrace();
+                  }
+              }
+              latch.countDown();
         }
 
         /**
@@ -74,6 +86,7 @@ public class PingPongRight {
          */
         void acquire() {
             // TODO fill in here
+        	new PlayPingPongThread("ping", null, null, 1).acquire();
         }
 
         /**
@@ -88,6 +101,7 @@ public class PingPongRight {
          * iteration.
          */
         // TODO - You fill in here.
+        System.out.println(stringToPrint);
 
         /**
          * Two SimpleSemaphores use to alternate pings and pongs.  You
