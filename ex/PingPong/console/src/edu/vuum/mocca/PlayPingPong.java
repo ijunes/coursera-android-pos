@@ -178,7 +178,11 @@ public class PlayPingPong implements Runnable
         /**
          * Number of times we've iterated thus far in our "turn".
          */
+<<<<<<< HEAD
         private int mTurnCountDown = 0;
+=======
+        private int mIterationCount = 0;
+>>>>>>> 9fd1c4e49778d97613b3d9cc324c279dfb2e7274
         
         /**
          * Id for the other thread.
@@ -188,7 +192,11 @@ public class PlayPingPong implements Runnable
         /**
          * Thread whose turn it currently is.
          */
+<<<<<<< HEAD
         private static long mTurnOwner;
+=======
+        private static long mThreadOwner;
+>>>>>>> 9fd1c4e49778d97613b3d9cc324c279dfb2e7274
         
         public void setOtherThreadId(long otherThreadId) 
         {
@@ -208,12 +216,20 @@ public class PlayPingPong implements Runnable
                            boolean isOwner) 
         {
             super(stringToPrint);
+<<<<<<< HEAD
             mTurnCountDown = mMaxTurns;
+=======
+            mIterationCount = mMaxTurns;
+>>>>>>> 9fd1c4e49778d97613b3d9cc324c279dfb2e7274
             mLock = lock;
             mConds[FIRST_COND] = firstCond;
             mConds[SECOND_COND] = secondCond;
             if (isOwner) 
+<<<<<<< HEAD
                 mTurnOwner = this.getId();
+=======
+                mThreadOwner = this.getId();
+>>>>>>> 9fd1c4e49778d97613b3d9cc324c279dfb2e7274
         }
 
         /**
@@ -222,7 +238,11 @@ public class PlayPingPong implements Runnable
         void acquire() {
             mLock.lock();
 
+<<<<<<< HEAD
             while (mTurnOwner != this.getId()) {
+=======
+            while (mThreadOwner != this.getId()) {
+>>>>>>> 9fd1c4e49778d97613b3d9cc324c279dfb2e7274
                 mConds[FIRST_COND].awaitUninterruptibly();
             }
 
@@ -235,11 +255,19 @@ public class PlayPingPong implements Runnable
         void release() {
             mLock.lock();
 
+<<<<<<< HEAD
             --mTurnCountDown;
 
             if (mTurnCountDown == 0) {
                 mTurnOwner = mOtherThreadId;
                 mTurnCountDown = mMaxTurns;
+=======
+            --mIterationCount;
+
+            if (mIterationCount == 0) {
+                mThreadOwner = mOtherThreadId;
+                mIterationCount = mMaxTurns;
+>>>>>>> 9fd1c4e49778d97613b3d9cc324c279dfb2e7274
                 mConds[SECOND_COND].signal();
             }
             mLock.unlock();

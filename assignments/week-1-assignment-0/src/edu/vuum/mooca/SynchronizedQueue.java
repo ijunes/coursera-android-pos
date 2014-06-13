@@ -186,7 +186,11 @@ public class SynchronizedQueue {
                         System.out.println("Exception " + e.toString()
                                            + " occurred in consumerRunnable");
                         // Indicate a timeout.
+<<<<<<< HEAD
                         mConsumerCounter = TIMEOUT_OCCURRED;
+=======
+                        mProducerCounter = TIMEOUT_OCCURRED;
+>>>>>>> 9fd1c4e49778d97613b3d9cc324c279dfb2e7274
                         return;
                     } catch (Exception e) {
                         System.out.println("Exception " + e.toString()
@@ -212,29 +216,42 @@ public class SynchronizedQueue {
         try {
             mQueue = queue;
 
+<<<<<<< HEAD
             // Please make sure to keep all the "TODO" comments in the
             // code below to make it easy for peer reviewers to find
             // them.
 
+=======
+>>>>>>> 9fd1c4e49778d97613b3d9cc324c279dfb2e7274
             // TODO - you fill in here to replace the null
             // initialization below to create two Java Threads, one
             // that's passed the producerRunnable and the other that's
             // passed the consumerRunnable.
+<<<<<<< HEAD
             Thread consumer = new Thread(consumerRunnable);
             Thread producer = new Thread(producerRunnable);
+=======
+            Thread consumer = null;
+            Thread producer = null;
+>>>>>>> 9fd1c4e49778d97613b3d9cc324c279dfb2e7274
 
             // TODO - you fill in here to start the threads. More
             // interesting results will occur if you start the
             // consumer first.
+<<<<<<< HEAD
             
             consumer.start();
             producer.start();
             
+=======
+
+>>>>>>> 9fd1c4e49778d97613b3d9cc324c279dfb2e7274
             // Give the Threads a chance to run before interrupting
             // them.
             Thread.sleep(100);
 
             // TODO - you fill in here to interrupt the threads.
+<<<<<<< HEAD
             consumer.interrupt();
             producer.interrupt();
             // TODO - you fill in here to wait for the threads to
@@ -242,6 +259,12 @@ public class SynchronizedQueue {
             consumer.join();
             producer.join();
             
+=======
+
+            // TODO - you fill in here to wait for the threads to
+            // exit.
+
+>>>>>>> 9fd1c4e49778d97613b3d9cc324c279dfb2e7274
             // Do some sanity checking to see if the Threads work as
             // expected.
             if (consumer == null 

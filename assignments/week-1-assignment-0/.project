@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>W1-A0-SynchronizedQueueTest</name>
+=======
+	<name>SynchronizedQueueTest</name>
+>>>>>>> 9fd1c4e49778d97613b3d9cc324c279dfb2e7274
 	<comment></comment>
 	<projects>
 	</projects>
