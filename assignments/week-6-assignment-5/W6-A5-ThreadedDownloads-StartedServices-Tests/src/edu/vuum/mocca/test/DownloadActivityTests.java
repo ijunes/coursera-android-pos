@@ -73,7 +73,6 @@ public class DownloadActivityTests
  
         // Let us dismiss the lockscreen
         getInstrumentation().runOnMainSync(new Runnable() {
-            @Override
             public void run() {
                 getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
             }
