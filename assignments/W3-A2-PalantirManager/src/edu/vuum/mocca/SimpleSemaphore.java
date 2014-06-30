@@ -39,7 +39,6 @@ public class SimpleSemaphore {
         // making sure to allow both fair and non-fair Semaphore
         // semantics.
     	mPermits = permits;
-    	mLock = fair ? new ReentrantLock(true): new ReentrantLock(false);
     	mLock = new ReentrantLock(fair);
         isZero = mLock.newCondition();
     }
