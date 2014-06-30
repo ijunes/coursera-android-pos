@@ -94,6 +94,7 @@ public class ThreadPoolDownloadService extends Service {
         // a Messenger who's Bundle key is defined by DownloadUtils.MESSENGER_KEY.
 
     	Runnable downloadRunnable = new Runnable() {
+			@Override
             public void run () {
                 DownloadUtils.downloadAndRespond(getApplicationContext(), intent.getData(), (Messenger) intent.getExtras().get(DownloadUtils.MESSENGER_KEY));
             }
