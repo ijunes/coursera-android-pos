@@ -26,7 +26,8 @@ public class LoginActivity extends StoryActivityBase{
 	EditText mPassword;
 	
 	// Make sure we use maximum security to store login credentials
-	static final int MAX_SECURITY = Integer.MAX_VALUE;
+	// Change to use Private enum.
+	static final int MAX_SECURITY = StorageUtilities.SECURITY_PRIVATE;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +45,7 @@ public class LoginActivity extends StoryActivityBase{
 	/**
 	 * Get the file used for storing login credentials
 	 */
-	public static File getLoginFile (Context context) {
+	private static File getLoginFile (Context context) {
 		return StorageUtilities.getOutputMediaFile(context, 	// Line 48
 				StorageUtilities.MEDIA_TYPE_TEXT, 
 				MAX_SECURITY, 
